@@ -24,7 +24,7 @@ public class CompanyController {
     }
 
     public String getForm(ModelMap modelMap){
-        Company company=new Company(); //why initialized
+        Company company=new Company();
         modelMap.put("company",company);
         return "companyForm";
     }
