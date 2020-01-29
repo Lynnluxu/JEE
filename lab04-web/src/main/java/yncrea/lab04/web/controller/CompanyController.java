@@ -26,10 +26,10 @@ public class CompanyController {
 //        this.companyService = companyService;
 //    }
 
-    @RequestMapping(path = "/")
-    public String welcomePage() {
-        return "welcome";
-    }
+//    @RequestMapping(path = "/")
+//    public String welcomePage() {
+//        return "welcome";
+//    }
 
     @RequestMapping(path = "/list")
     public String getListOfCompanies(ModelMap modelMap) {
