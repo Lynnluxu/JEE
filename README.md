@@ -1,3 +1,6 @@
+# Note
+* You are supposed to redirect to localhost_url/list(e.g. http://localhost:8080/lab04/list).
+* The DB credentials are "root:[NO PASSWORD]"
 # Lab 04
 
 ## Intro

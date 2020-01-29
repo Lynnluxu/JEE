@@ -2,6 +2,7 @@ package yncrea.lab04.web.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -15,15 +16,15 @@ import java.util.List;
 
 @Controller
 public class CompanyController {
-
+    @Autowired
     private CompanyService companyService;
 
     private static final Logger LOGGER = LoggerFactory.getLogger(CompanyController.class);
 
 
-    public CompanyController(CompanyService companyService) {
-        this.companyService = companyService;
-    }
+//    public CompanyController(CompanyService companyService) {
+//        this.companyService = companyService;
+//    }
 
     @RequestMapping(path = "/")
     public String welcomePage() {
