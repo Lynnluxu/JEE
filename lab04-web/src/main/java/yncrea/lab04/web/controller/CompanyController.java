@@ -16,9 +16,10 @@ import java.util.List;
 @Controller
 public class CompanyController {
 
+    private CompanyService companyService;
+
     private static final Logger LOGGER = LoggerFactory.getLogger(CompanyController.class);
 
-    private CompanyService companyService;
 
     public CompanyController(CompanyService companyService) {
         this.companyService = companyService;
@@ -33,8 +34,8 @@ public class CompanyController {
     public String getListOfCompanies(ModelMap modelMap) {
         final List<Company> companies = companyService.findAllWithProjects();
         modelMap.addAttribute("companies", companies);
-        LOGGER.info("Displaying all companies ....");
         LOGGER.debug("Get all companies");
+        LOGGER.info("Displaying all companies");
         return "companiesList";
     }
 
@@ -54,9 +55,9 @@ public class CompanyController {
 
     @RequestMapping(path = "{id}/delete",method = RequestMethod.GET)
     public String deleteCompany(@PathVariable Long id) {
-        LOGGER.warn("Caution : Please add a null check on parameter");
+        LOGGER.warn("Caution : Please add a null check");
         companyService.deleteById(id);
-        LOGGER.info("Company deleted successfully");
+        LOGGER.info("Company deleted");
         return "redirect:/list";
     }
 }

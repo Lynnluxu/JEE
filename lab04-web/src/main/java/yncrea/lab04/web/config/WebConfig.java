@@ -20,15 +20,15 @@ public class WebConfig implements WebMvcConfigurer {
 
     @Bean
     public VelocityConfigurer VelocityConfig() {
-        VelocityConfigurer cfg = new VelocityConfigurer();
-        cfg.setResourceLoaderPath("/WEB-INF/velocity/");
-        return cfg;
+        VelocityConfigurer velocityConfigurer = new VelocityConfigurer();
+        velocityConfigurer.setResourceLoaderPath("/WEB-INF/velocity/");
+        return velocityConfigurer;
     }
 
     @Bean
     public VelocityViewResolver VelocityViewConfig() {
-        VelocityViewResolver resolver = new VelocityViewResolver();
-        resolver.setSuffix(".vm");
-        return resolver;
+        VelocityViewResolver velocityViewResolver = new VelocityViewResolver();
+        velocityViewResolver.setSuffix(".vm");
+        return velocityViewResolver;
     }
 }
